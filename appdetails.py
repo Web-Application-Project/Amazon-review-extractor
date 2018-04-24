@@ -68,14 +68,14 @@ def hello_world():
             print (str(sentiment['text'])+' is ' +'negative')
             negative_sentiment+=float(str(sentiment['polarity_confidence']))
             s="{0:.2f}".format(negative_sentiment)
-            negative_sentiment=float(s)*100
+            negative_sentiment=float(s)
             negative_review_number+=1
         elif (str(sentiment['polarity']) == 'positive'):
             positive=1
             print(str(sentiment['text']) + ' is ' + 'positive')
             positive_sentiment += float(str(sentiment['polarity_confidence']))
             s = "{0:.2f}".format(positive_sentiment)
-            positive_sentiment = float(s) * 100
+            positive_sentiment = float(s)
             positive_review_number += 1
         if(grahicsreview(reviewstring)):
             if(positive==1):
