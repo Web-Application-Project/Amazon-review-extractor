@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Portfolio Item - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/portfolio-item.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">playstore</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Portfolio Item Heading -->
+      <h1 class="my-4">Facebook
+      </h1>
+
+      <!-- Portfolio Item Row -->
+      <div class="row">
+
+          +
+        <div class="col-md-4">
+          <img class="img-fluid" src="{{ user_image }}" alt="User Image">
+            <h1 class="my-4">
+          </h1>
+            <div class="row">
+                <div class="p-3 mb-2 bg-primary text-white">positive review sentiment</div>
+                <div class="p-3 mb-2 bg-dark text-white">{{ positive_senti }}</div>
+            </div>
+            <div class="row">
+                <div class="p-3 mb-2 bg-primary text-white">negative review sentiment</div>
+                <div class="p-3 mb-2 bg-dark text-white">{{ negative_senti }}</div>
+            </div>
+            <div>
+                <a class="btn btn-primary" href="/graphics" role="button">graphics</a>
+            </div>
+            <div class="row">
+                <div class="p-3 mb-2 bg-success text-white">upvote</div>
+                <div class="p-3 mb-2 bg-dark text-white">{{ graphicsupvote }}</div>
+                <div class="p-3 mb-2 bg-danger text-white">downvote</div>
+                <div class="p-3 mb-2 bg-dark text-white">{{ graphicsdownvote }}</div>
+            </div>
+            <div>
+                <a class="btn btn-primary" href="" role="button">crash</a>
+            </div>
+            <div class="row">
+                <div class="p-3 mb-2 bg-success text-white">upvote</div>
+                <div class="p-3 mb-2 bg-dark text-white">{{ crashupvote }}</div>
+                <div class="p-3 mb-2 bg-danger text-white">downvote</div>
+                <div class="p-3 mb-2 bg-dark text-white">{{ crashdownvote }}</div>
+            </div>
+            <div>
+               <a class="btn btn-primary" href="" role="button">userfriendly</a>
+            </div>
+            <div class="row">
+                <div class="p-3 mb-2 bg-success text-white">upvote</div>
+                <div class="p-3 mb-2 bg-dark text-white">{{ userfriendlyupvote }}</div>
+                <div class="p-3 mb-2 bg-danger text-white">downvote</div>
+                <div class="p-3 mb-2 bg-dark text-white">{{ userfriendlydownvote }}</div>
+            </div>
+            <div>
+                <a class="btn btn-primary" href="" role="button">advertisement</a>
+            </div>
+            <div class="row">
+                <div class="p-3 mb-2 bg-success text-white">upvote</div>
+                <div class="p-3 mb-2 bg-dark text-white">{{ advertiseupvote }}</div>
+                <div class="p-3 mb-2 bg-danger text-white">downvote</div>
+                <div class="p-3 mb-2 bg-dark text-white">{{ advertisedownvote }}</div>
+            </div>
+
+            <div>
+                <a class="btn btn-primary" href="" role="button">powerconsume</a>
+            </div>
+            <div class="row">
+                <div class="p-3 mb-2 bg-success text-white">upvote</div>
+                <div class="p-3 mb-2 bg-dark text-white">{{ powerconsumeupvote }}</div>
+                <div class="p-3 mb-2 bg-danger text-white">downvote</div>
+                <div class="p-3 mb-2 bg-dark text-white">{{ powerconsumedownvote }}</div>
+            </div>
+            <div>
+                <a class="btn btn-primary" href="" role="button">control</a>
+            </div>
+            <div class="row">
+                <div class="p-3 mb-2 bg-success text-white">upvote</div>
+                <div class="p-3 mb-2 bg-dark text-white">{{ controlupvote }}</div>
+                <div class="p-3 mb-2 bg-danger text-white">downvote</div>
+                <div class="p-3 mb-2 bg-dark text-white">{{ controldownvote }}</div>
+            </div>
+          <div>
+              <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.facebook.katana" role="button">install</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h3 class="my-3">Description</h3>
+          <p>Keeping up with friends is faster and easier than ever. Share updates and photos, engage with friends and Pages, and stay connected to communities important to you.
+            Features on the Facebook app include:
+            * Connect with friends and family and meet new people on your social media network
+            * Set status updates & use Facebook emoji to help relay what’s going on in your world
+            * Share photos, videos, and your favorite memories.</p>
+
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>

@@ -34,6 +34,43 @@ def advertisedreview(review_string):
     if review_string.find("advertise") != -1:
         return 1
     return 0
+
+graphics_arraylist=[];
+control_arraylist=[];
+power_consume_arraylist = [];
+userfriendly_arraylist = [];
+advertisement_arraylist = [];
+crash_arraylist = [];
+
+@app.route("/graphics")
+def graphicspath():
+    return "hello"
+
+
+@app.route("/control")
+def controlpath():
+    return "hello"
+
+
+@app.route("/powerconsume")
+def powerconsumepath():
+    return "hello"
+
+
+@app.route("/userfriendly")
+def userfriendlypath():
+    return "hello"
+
+
+@app.route("/advertisement")
+def advertisementpath():
+    return "hello"
+
+
+@app.route("/crash")
+def crashpath():
+    return "hello"
+
 @app.route('/')
 def hello_world():
     full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'fb.png')
@@ -57,6 +94,8 @@ def hello_world():
     advertise_downvote=0
     crash_upvote=0
     crash_downvote=0
+
+
     i=0
     while i<len(file_string):
         reviewstring=file_string[i]
@@ -78,36 +117,43 @@ def hello_world():
             positive_sentiment = float(s)
             positive_review_number += 1
         if(grahicsreview(reviewstring)):
+            graphics_arraylist.append(reviewstring)
             if(positive==1):
                 graphics_upvote+=1
             elif(negative==1):
                 graphics_downvote+=1
         if(controlreview(reviewstring)):
+            control_arraylist.append(reviewstring)
             if(positive==1):
                 control_upvote+=1
             elif(negative==1):
                 control_downvote+=1
         if(powerreview(reviewstring)):
+            power_consume_arraylist.append(reviewstring)
             if(positive==1):
                 power_consume_downvote+=1
             elif(negative==1):
                 power_consume_upvote+=1
         if(crashreview(reviewstring)):
+            crash_arraylist.append(reviewstring)
             if(positive==1):
                 crash_downvote+=1
             elif(negative==1):
                 crash_upvote+=1
         if(userfriendly(reviewstring)):
+            userfriendly_arraylist(reviewstring)
             if(positive==1):
                 userfriendly_upvote+=1
             if(negative==1):
                 userfriendly_downvote+=1
         if(adsreview(reviewstring)):
+            advertisement_arraylist.append(reviewstring)
             if(positive==1):
                 advertise_downvote+=1
             elif(negative==1):
                 advertise_upvote+=1
         if(advertisedreview(reviewstring)):
+            advertisement_arraylist.append(reviewstring)
             if(positive==1):
                 advertise_downvote+=1
             elif(negative==1):
@@ -126,6 +172,7 @@ def hello_world():
     return render_template(
         'appdetailspage.html', positive_senti=average_positive_sentiment,negative_senti=average_negative_sentiment,user_image = full_filename,graphicsupvote=graphics_upvote,graphicsdownvote=graphics_downvote,controlupvote=control_upvote,controldownvote=control_downvote,
         powerconsumeupvote=power_consume_upvote,powerconsumedownvote=power_consume_downvote,crashupvote=crash_upvote,crashdownvote=crash_downvote,userfriendlyupvote=userfriendly_upvote,userfriendlydownvote=userfriendly_downvote,advertiseupvote=advertise_upvote,advertisedownvote=advertise_downvote
+        ,graphicsarraylist=graphics_arraylist,controlarraylist=control_arraylist,powerconsumearraylist=power_consume_arraylist,crasharraylist=crash_arraylist,advertisementarraylist=advertisement_arraylist
     )
 if __name__ == '__main__':
 
